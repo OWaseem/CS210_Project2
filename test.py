@@ -71,8 +71,7 @@ def update_word_frequency(processed_text, cumulated_frequency=None):
 
     # update the cumulated frequency with the frequency in each sentence
     """__Your_Code_Here__"""
-    processed_text = [sentence.split() for sentence in processed_text]
-    cumulated_frequency.update(word for sentence in processed_text for word in sentence)  # Combined update
+    cumulated_frequency.update(processed_text)
 
     return cumulated_frequency
 
